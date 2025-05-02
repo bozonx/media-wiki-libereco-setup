@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /index.php
+Disallow: /skins/
+Disallow: /w/Special:*
+Allow: /w/
+Allow: /w/images/
+
+Sitemap: /sitemap.xml
