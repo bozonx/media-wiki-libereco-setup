@@ -14,12 +14,23 @@ $wgExternalLinkTarget = '_blank';
 $wgScriptPath = "";
 # The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
-# MySQL table options to use during installation or update
-$wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 # Time zone
 $wgLocaltimezone = "UTC";
 # Path to the GNU diff3 utility. Used for conflict resolution.
 $wgDiff3 = "/usr/bin/diff3";
+
+#### Database settings
+# MySQL table options to use during installation or update
+$wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
+$wgDBtype = "mysql";
+$wgDBserver = "database";
+$wgDBuser = "mwuser";
+
+#### UI
+$wgLogos = [
+	#'1x' => "$wgResourceBasePath/repo/assets/logo.svg",
+	'icon' => "$wgResourceBasePath/repo/assets/logo.svg",
+];
 
 #### Upload and media
 # Upload from URL
