@@ -24,7 +24,6 @@ $wgDiff3 = "/usr/bin/diff3";
 $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 $wgDBtype = "mysql";
 $wgDBserver = "database";
-$wgDBuser = "mwuser";
 
 #### UI
 $wgLogos = [
@@ -81,6 +80,24 @@ $wgAccountCreationThrottle = [ [
 	'count' => 20,
 	'seconds' => 86400,
 ] ];
+
+##### Language
+
+switch ($_SERVER['HTTP_HOST']) {
+  case 'ru.mediawiki.example.com':
+    $wgLanguageCode = 'ru';
+    $wgServer = "https://ru." . MAIN_DOMAIN;
+    break;
+  case 'es.mediawiki.example.com':
+    $wgLanguageCode = 'es';
+    $wgServer = "https://es." . MAIN_DOMAIN;
+    break;
+  default:
+    # default interface language. Site language code, should be one of the list in ./includes/languages/data/Names.php
+    $wgLanguageCode = 'en';
+    $wgServer = "https://" . MAIN_DOMAIN;
+  break;
+}
 
 ######## Enabling
 
