@@ -67,8 +67,8 @@ $wgEnableUserEmail = true;
 $wgEnotifUserTalk = true; # UPO
 # allow email notification for watched pages
 $wgEnotifWatchlist = true; # UPO
-#$wgEmergencyContact = "emergency@mg." . 'MAIN_DOMAIN';
-$wgPasswordSender   = "no-reply@mg." . 'MAIN_DOMAIN';
+#$wgEmergencyContact = "emergency@mg." . MAIN_DOMAIN;
+$wgPasswordSender   = "no-reply@mg." . MAIN_DOMAIN;
 
 ##### Cache
 $wgUseCdn = true;
