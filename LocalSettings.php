@@ -29,7 +29,7 @@ $wgDBserver = "database";
 #### UI
 $wgLogos = [
 	#'1x' => "$wgResourceBasePath/repo/assets/logo.svg",
-	'icon' => "$wgResourceBasePath/repo/assets/logo.svg",
+	'icon' => "$wgResourceBasePath/resources/assets/tmpl-img/logo.svg",
 ];
 
 #### Upload and media
