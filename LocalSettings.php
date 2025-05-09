@@ -23,6 +23,11 @@ $wgDeleteRevisionsLimit = 5000;
 # about this MediaWiki instance. The Wikimedia Foundation shares this data
 # with MediaWiki developers to help guide future development efforts.
 $wgPingback = true;
+# License
+$wgRightsText = "GNU Free Documentation License 1.3 and later";
+$wgRightsUrl = "https://www.gnu.org/copyleft/fdl.html";
+$wgRightsIcon = "$wgResourceBasePath/resources/assets/licenses/gnu-fdl.png";
+$wgDBuser = "mwuser";
 
 #### Database settings
 # MySQL table options to use during installation or update
@@ -62,6 +67,8 @@ $wgEnableUserEmail = true;
 $wgEnotifUserTalk = true; # UPO
 # allow email notification for watched pages
 $wgEnotifWatchlist = true; # UPO
+#$wgEmergencyContact = "emergency@mg." . 'MAIN_DOMAIN';
+$wgPasswordSender   = "no-reply@mg." . 'MAIN_DOMAIN';
 
 ##### Cache
 $wgUseCdn = true;
@@ -74,6 +81,7 @@ $wgMemCachedServers = ['memcached:11211'];
 # Set this to false if MediaWiki is behind a CDN that re-orders query parameters on incoming requests
 $wgCdnMatchParameterOrder = false;
 $wgEnableSidebarCache = true;
+$wgCacheDirectory = '/var/local/w/cache';
 
 ## Set $wgCacheDirectory to a writable directory on the web server
 ## to make your wiki go slightly faster. The directory should not
