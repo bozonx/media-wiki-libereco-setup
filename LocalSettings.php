@@ -19,6 +19,10 @@ $wgLocaltimezone = "UTC";
 # Path to the GNU diff3 utility. Used for conflict resolution.
 $wgDiff3 = "/usr/bin/diff3";
 $wgDeleteRevisionsLimit = 5000;
+# Periodically send a pingback to https://www.mediawiki.org/ with basic data
+# about this MediaWiki instance. The Wikimedia Foundation shares this data
+# with MediaWiki developers to help guide future development efforts.
+$wgPingback = true;
 
 #### Database settings
 # MySQL table options to use during installation or update
@@ -102,6 +106,9 @@ $wgAccountCreationThrottle = [ [
 	'count' => 20,
 	'seconds' => 86400,
 ] ];
+# To skip captchas for users who confirmed their email, you need to set both:
+$wgGroupPermissions['emailconfirmed']['skipcaptcha'] = true;
+$wgAllowConfirmedEmail = true;
 
 ##### Language
 
@@ -164,6 +171,21 @@ wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'Thanks' );
 
 # Extra extensions
+wfLoadExtension( 'cldr' );
+wfLoadExtension( 'Babel' );
+wfLoadExtension( 'CleanChanges' );
+wfLoadExtension( 'UniversalLanguageSelector' );
+wfLoadExtension( 'Translate' );
+wfLoadExtension( 'PageProperties' );
+wfLoadExtension( 'GTag' );
+wfLoadExtension( 'ApprovedRevs' );
+wfLoadExtension( 'AdminLinks' );
+wfLoadExtension( 'EmailAuth' );
+wfLoadExtension( 'Patroller' );
+wfLoadExtension( 'UserMerge' );
+wfLoadExtension( 'AntiSpoof' );
+wfLoadExtension( 'SmiteSpam' );
+wfLoadExtension( 'StopForumSpam' );
 
 
 ######## Extensions and skins settings
@@ -171,6 +193,12 @@ wfLoadExtension( 'Thanks' );
 $wgCitizenEnableDrawerSiteStats = false;
 $wgCitizenEnableManifest = false;
 $wgThanksLogging = false;
+# for CleanChanges
+$wgDefaultUserOptions['usenewrc'] = 1;
+# Extension OATHAuth
+$wgGroupPermissions['user']['oathauth-enable'] = true;
+# обязательная двухфакторка для админов и бюрократов
+$wgOATHRequiredForGroups = ['sysop', 'bureaucrat'];
 
 ######## Permissions
 
