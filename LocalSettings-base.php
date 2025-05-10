@@ -70,7 +70,7 @@ $wgEnotifWatchlist = true; # UPO
 #$wgEmergencyContact = "emergency@mg." . MAIN_DOMAIN;
 $wgPasswordSender   = "no-reply@mg." . MAIN_DOMAIN;
 
-##### Cache
+##### Performance
 $wgUseCdn = true;
 $wgResourceLoaderMaxage['unversioned'] = 3600; // Кэширование на 1 час
 $wgUseGzip = true;
@@ -82,6 +82,8 @@ $wgMemCachedServers = ['memcached:11211'];
 $wgCdnMatchParameterOrder = false;
 $wgEnableSidebarCache = true;
 $wgCacheDirectory = '/var/local/w/cache';
+# do not run jobs on request 
+$wgJobRunRate = 0;
 
 ## Set $wgCacheDirectory to a writable directory on the web server
 ## to make your wiki go slightly faster. The directory should not
