@@ -56,6 +56,7 @@ RUN apt-get update \
   && git clone --depth=1 --branch REL1_43 https://gerrit.wikimedia.org/r/mediawiki/extensions/UserMerge extensions/UserMerge && rm -Rf extensions/UserMerge/.git \
   && git clone --depth=1 --branch REL1_43 https://gerrit.wikimedia.org/r/mediawiki/extensions/CheckUser extensions/CheckUser && rm -Rf extensions/CheckUser/.git \
   && git clone --depth=1 --branch REL1_43 https://gerrit.wikimedia.org/r/mediawiki/extensions/AntiSpoof extensions/AntiSpoof && rm -Rf extensions/AntiSpoof/.git \
+  && git clone --depth=1 --branch REL1_43 https://gerrit.wikimedia.org/r/mediawiki/extensions/Memcached extensions/Memcached && rm -Rf extensions/Memcached/.git \
   # Not standardized repos \
   && git clone --depth=1 https://gerrit.wikimedia.org/r/mediawiki/extensions/PageProperties extensions/PageProperties && rm -Rf extensions/PageProperties/.git \
   && git clone --depth=1 https://github.com/SkizNet/mediawiki-GTag extensions/GTag && rm -Rf extensions/GTag/.git \

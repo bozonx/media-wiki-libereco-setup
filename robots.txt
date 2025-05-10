@@ -1,8 +1,13 @@
 User-agent: *
+
 Disallow: /index.php
 Disallow: /skins/
-Disallow: /w/Special:*
-Allow: /w/
+Disallow: /w/Special:
+Disallow: /w/api.php
+Disallow: /w/load.php
+Disallow: /w/rest.php
+Allow: /w/resources/
 Allow: /w/images/
+Allow: /w/
 
 Sitemap: /sitemap.xml

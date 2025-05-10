@@ -194,6 +194,7 @@ wfLoadExtension( 'UserMerge' );
 wfLoadExtension( 'AntiSpoof' );
 wfLoadExtension( 'SmiteSpam' );
 wfLoadExtension( 'StopForumSpam' );
+wfLoadExtension( 'Memcached' );
 
 
 ######## Extensions and skins settings
